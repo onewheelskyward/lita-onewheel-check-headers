@@ -1,37 +1,32 @@
-# lita-onewheel-forecast-io
+# lita-onewheel-check-headers
 
-[![Build Status](https://travis-ci.org/onewheelskyward/lita-onewheel-forecast-io.png?branch=master)](https://travis-ci.org/onewheelskyward/lita-onewheel-forecast-io)
-[![Coverage Status](https://coveralls.io/repos/onewheelskyward/lita-onewheel-forecast-io/badge.svg)](https://coveralls.io/r/onewheelskyward/lita-onewheel-forecast-io)
-[![Documentation Status](https://readthedocs.org/projects/lita-onewheel-forecast-io/badge/?version=latest)](https://readthedocs.org/projects/lita-onewheel-forecast-io/?badge=latest)
+[![Build Status](https://travis-ci.org/onewheelskyward/lita-onewheel-check-headers.png?branch=master)](https://travis-ci.org/onewheelskyward/lita-onewheel-check-headers)
+[![Coverage Status](https://coveralls.io/repos/onewheelskyward/lita-onewheel-check-headers/badge.svg)](https://coveralls.io/r/onewheelskyward/lita-onewheel-check-headers)
+[![Documentation Status](https://readthedocs.org/projects/lita-onewheel-check-headers/badge/?version=latest)](https://readthedocs.org/projects/lita-onewheel-check-headers/?badge=latest)
 
-This Lita handler takes location-based queries and returns interesting data about the weather.  Temperatures, rain chance and intensity, and wind speeds are all included.  But wait, there's more!  if you download now, you also get 8-ball style replies with `!rain` and `!snow`!
+This Lita handler checks websites for headers.
 
 ## Installation
 
-Add lita-onewheel-forecast-io to your Lita instance's Gemfile, from github since it's currently unpublished:
+Add lita-onewheel-check-headers to your Lita instance's Gemfile:
 
 ``` ruby
-gem 'lita-onewheel-forecast-io', '~> 0.0'
+gem 'lita-onewheel-check-headers', '~> 0'
 ```
 
 ## Configuration
 
 ``` ruby
 Lita.configure do |config|
-  config.handlers.onewheel_check_headers.api_key = 'yourforecastiokey'
-  config.handlers.onewheel_check_headers.api_uri = 'https://api.forecast.io/forecast/'
-  config.handlers.onewheel_check_headers.colors = true
+  config.handlers.onewheel_check_headers.urls = %w(uri1 uri2)
+  config.handlers.onewheel_check_headers.headers = %w(headers to look for)
 end
 ```
-Register at https://developer.forecast.io/ to receive an API key (1000 calls/day for free). Once you have your key go ahead and toss if into your config block. Set colors to bool option of your liking. Enjoy!
 
 ## Usage
 
-!rain, !snow and other fine things.
+!lllrev
 
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
-
-# hmm
-	☀ ☀ 🔥 🔥 ☼  ☼  ☼
