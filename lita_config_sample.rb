@@ -1,4 +1,13 @@
 Lita.configure do |config|
-  config.handlers.onewheel_check_headers.urls = %w(uri1 uri2)
-  config.handlers.onewheel_check_headers.headers = %w(headers to look for)
+  config.handlers.onewheel_check_headers.default = 'main'
+  config.handlers.onewheel_check_headers.servers = {
+      main: {
+          urls: ['https://main.server'],
+          headers: ['header1', 'header2']
+      },
+      secondary: {
+          urls: ['http://secondary.url'],
+          headers: ['header3', 'header4']
+      }
+  }
 end
